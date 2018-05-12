@@ -1,6 +1,8 @@
 html{
     background-image: url("../images/bakground.jpg");
+    margin: 0 auto;
     min-width: 630px;
+    width: 80%;
 }
 
 body{

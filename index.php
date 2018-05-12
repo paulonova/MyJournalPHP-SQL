@@ -17,6 +17,20 @@
 
 <?php endif ?>
 
+<!-- Alert login error Dialog -->
+<?php if(isset($_GET["logout"])):?>
+        
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <?php 
+                echo $_GET["logout"];
+                unset($_GET["logout"]);
+            ?>
+        </div> 
+
+<?php endif ?>
 
 <div class="inlamning_title jumbotron">
     <h1>Inlämningsuppgift CRUD/PHP</h1>    
@@ -38,7 +52,7 @@
 
             <div class="signin_btn">
                 <button id="register" class="btn btn-warning" type="button">Not registered</button>
-                <input class="btn btn-lg btn-primary" value="Sign in" type="submit">
+                <input class="btn btn-lg btn-primary" name="sub" value="Sign in" type="submit">
             </div>
         </div>       
       </form>

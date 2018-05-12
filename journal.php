@@ -2,6 +2,8 @@
         require_once "classes/entry.php";
         require_once 'partials/database.php';
 
+        
+
         if(isset($_GET['edit'])){
             $id = $_GET['edit'];
             $edit_state = true;
@@ -21,7 +23,15 @@
             $record['content'] = "";    
         }
 
-?>
+        require_once 'partials/session_timeout.php';
+        // if(count($_COOKIE) > 0) {
+        //     $_SESSION['msg'] = "Cookies are enabled.";
+        // } else {
+        //     $_SESSION['msg'] = "Cookies are disabled.";
+        // }
+
+    ?>
+
 
 <!-- Alert Dialog -->
 <?php if(isset($_SESSION['msg'])):?>

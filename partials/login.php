@@ -2,7 +2,6 @@
 require_once 'session_start.php';
 require_once 'database.php';
 
-
 $statement = $pdo->prepare("SELECT * FROM users WHERE username = :username");
 $statement->execute([
   "username" => $_POST["username"]
